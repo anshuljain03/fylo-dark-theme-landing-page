@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to bottom,hsl(217, 28%, 15%) 0%,hsl(217, 28%, 15%) 55%, hsl(218, 28%, 13%) 55%, hsl(218, 28%, 13%) 100%);
+  background: linear-gradient(to bottom,hsl(217, 28%, 15%) 0%,hsl(217, 28%, 15%) 35%, hsl(218, 28%, 13%) 35%, hsl(218, 28%, 13%) 100%);
   position: relative;
 }
 
@@ -37,32 +37,12 @@ h4 {
   margin-right: auto;
 }
 
-@media only screen and (max-width: 1400px) {
-  .container {
-    padding-left: 55px;
-    padding-right: 55px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-}
-
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-@media only screen and (max-width: 860px) {
-  .flex {
-    flex-direction: column;
-  }
-}
 
 
 /* Header */
@@ -86,25 +66,10 @@ header::before {
   height: 30vh
 } */
 
-@media only screen and (max-width: 600px) {
-  header {margin-top: 50px;}
-}
-
-@media only screen and (max-width: 450px) {
-  header {flex-direction: column;}
-  nav {margin-top: 20px;}
-}
-
 nav {
   width: 267px;
   display: flex;
   justify-content: space-between;
-}
-
-@media only screen and (max-width: 650px) {
-  nav {
-    width: 220px;
-  }
 }
 
 nav a {
@@ -160,19 +125,6 @@ h1 {
 .cta-btn:hover,
 .cta-btn:active {
   background: linear-gradient(to left, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-}
-
-@media only screen and (max-width: 450px) {
-  .cta-btn {
-    width: 300px;
-  }
-}
-
-
-@media only screen and (max-width: 860px) {
-  .illustration {
-    max-width: 90%;
-  }
 }
 
 
@@ -268,12 +220,6 @@ h1 {
   position: relative;
 }
 
-@media only screen and (max-width: 860px) {
-  .testimonial {
-    margin: auto;
-  }
-}
-
 .testimonial:nth-child(2) {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -314,7 +260,8 @@ h1 {
 
 .cta-box {
   background: hsl(217, 28%, 15%);
-  max-width: 860px;
+  width: 860px;
+  max-width: 90%;
   margin: auto;
   text-align: center;
   padding: 3rem;
@@ -335,6 +282,7 @@ h1 {
 
 .cta-box input[type="email"] {
   width: 500px;
+  max-width: 100%;
   margin-right: 1.5rem;
   border: none;
   padding: 1rem;
@@ -401,12 +349,6 @@ footer {
   margin-top: 10px;
 }
 
-@media (max-width: 826px) {
-  .footer__social {
-    margin-top: 2rem;
-  }
-}
-
 .icon-border {
   margin: 10px;
   border: 1px solid rgba(255, 255, 255, 0.849);
@@ -418,3 +360,134 @@ i:nth-child(1) {
   padding-left: 11px;
   padding-right: 13px;
 }
+
+
+/* Media Queries */
+
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .footer__nav {
+    flex-wrap: wrap;
+  }
+}
+ 
+@media only screen and (max-width: 860px) { 
+  .flex { 
+    flex-direction: column; 
+  } 
+
+  .illustration {
+    max-width: 90%;
+  }
+  
+  .illustration2 {
+    max-width: 90%;
+  }
+
+  .features {
+    display: block;
+  }
+
+  .feature {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+  }
+  
+  .pitch__sale {
+    margin-left: 0;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  
+  .pitch__sale h1 br {
+    display: none;
+  }
+
+  .pitch__sale h4,
+  .pitch__sale a {
+    font-size: 16px;
+  }
+  
+  .testimonials {
+    flex-direction: column;
+  }
+  
+  .testimonial {
+    margin: auto;
+  }
+  
+  .testimonial:nth-child(2) {
+    margin: 2rem auto;
+  }
+  
+  .footer__links {
+    margin-top: 2rem;
+  }
+  
+  .footer__social {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  nav {
+    width: 220px;
+  }
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cta-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-box input[type="button"] {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  
+  header {flex-direction: column;}
+  nav {margin-top: 2rem;}
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .pitch__sale h1 {
+    font-size: 1.3rem
+  }
+  .testimonial {
+    max-width: 100%;
+  }
+
+  .cta-box {
+    padding: 1.5rem
+  }
+}
+
